@@ -4,6 +4,7 @@ import './App.css';
 import React, { Component } from "react";
 import { Route, Switch, Link } from 'react-router-dom';
 import AllAuthors from '../AllAuthors/AllAuthors';
+import AuthorDetail from '../AuthorDetail/AuthorDetail';
 import axios from 'axios';
 // import logo from './logo.svg';  
 
@@ -12,35 +13,43 @@ import axios from 'axios';
 class App extends Component {
   constructor() {
     super();
-    this.authorsBaseUrl =  'http://localhost:3000/api/authors';
+    this.authorsBaseUrl =  'http://localhost:3000/api/authors/';
 
     this.state = {
       authors: []
     }
   }
 
-  async getAllAuthors() {
+  getAllAuthors = async()=>{
     const response = await axios.get(this.authorsBaseUrl);
-    this.setState({ artists: response.data.authors });
+    console.log(response)
+
+    this.setState({ authors: response.data.author });
 
     console.log(this.state.authors)
+
   }
-  async componentDidMount() {
+    
+
+  componentDidMount = async () => {
     await this.getAllAuthors()
+    console.log(this.componentDidMount)
   }
 
   addAuthors = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
-
+  
     await axios.post(this.authorsBaseUrl, { name });
     await this.getAllAuthors()
+
   }
 
   addBook = async (event, authors_id) => {
     event.preventDefault();
     const title = event.target.title.value
-    const url = `${this.authorsBaseUrl}/${author_id}/newbook`;
+    console.log(title)
+    const url = `${this.authorsBaseUrl}/${authors_id}/newbook`;
 
     console.log(url, { title });
 
@@ -49,6 +58,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="App">
         <nav className='App-nav'>
@@ -60,7 +70,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path='/'>
-            <h1>Welcome to Book club!</h1>
+            <h1>Welcome to Famous Authors Club!</h1>
             <p>Check out our Authors and their Books! Feel free to add your own!</p>
           </Route>
 
@@ -82,27 +92,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

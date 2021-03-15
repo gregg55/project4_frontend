@@ -15,10 +15,11 @@ export default function AllAuthors(props) {
         
             <form onSubmit={(e) => props.createAuthors(e)}>
                 <input placeholder='name' name='name' />
-                <input type='submit' value='create author' />
+                <input type='submit' value='Create a New Author' />
             </form>
             
             <ul>{authors}</ul>
         </section>
     );
 }
+
