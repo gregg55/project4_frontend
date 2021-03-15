@@ -6,6 +6,9 @@ import { Route, Switch, Link } from 'react-router-dom';
 import AllAuthors from '../AllAuthors/AllAuthors';
 import AuthorDetail from '../AuthorDetail/AuthorDetail';
 import axios from 'axios';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+
 // import logo from './logo.svg';  
 
 // Change from Function callout to Class Component
@@ -13,17 +16,17 @@ import axios from 'axios';
 class App extends Component {
   constructor() {
     super();
-    this.authorsBaseUrl =  'http://localhost:3000/api/authors/';
+    this.authorsBaseUrl =  'http://localhost:3000/api/authors';
 
     this.state = {
       authors: []
     }
   }
 
-  getAllAuthors = async()=>{
+  async getAllAuthors () {
     const response = await axios.get(this.authorsBaseUrl);
     console.log(response)
-
+ 
     this.setState({ authors: response.data.author });
 
     console.log(this.state.authors)
@@ -31,17 +34,18 @@ class App extends Component {
   }
     
 
-  componentDidMount = async () => {
+  async componentDidMount () {
     await this.getAllAuthors()
     console.log(this.componentDidMount)
   }
 
-  addAuthors = async (event) => {
+  addAuthor = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
-  
+    console.log(name)
     await axios.post(this.authorsBaseUrl, { name });
     await this.getAllAuthors()
+    console.log(this.authorsBaseUrl, { name })
 
   }
 
@@ -60,6 +64,7 @@ class App extends Component {
   render() {
 
     return (
+
       <div className="App">
         <nav className='App-nav'>
           <ul>
@@ -86,6 +91,10 @@ class App extends Component {
           />
             
         </Switch>
+        <footer>
+          <Footer />
+        </footer>
+
       </div>
     );
   }
