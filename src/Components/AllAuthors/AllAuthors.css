@@ -4,6 +4,7 @@ h1 {
     text-align: center;
     font-size: 25px;
 
+
 }
 
 h3 {
@@ -67,8 +68,22 @@ h3 {
       margin-right: 180px;
     } */
 
-
+    .homeImg2{
+    
+      /* margin-top: 100px; */
+      margin-right: 250px;
+      border: 0.5rem outset burlywood;
+      border-radius: 5px;
+      padding: 1px;
+      height: 80px;
+      width: 80px;
+      
+    }
    
+    /* #form2.submit {
+      background-color:red;
+
+    } */
    
 
    

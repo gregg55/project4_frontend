@@ -141,6 +141,10 @@ class App extends Component {
 
             <div className="homeImg" ><img className="img1" src ="/images/Book-Club.jpg" alt="Book"/></div>
 
+            {/* <p> <img src ="/images/Book-Club.jpg" alt="Book"  width ="100" height ="100" align ="right"/>
+            Check out our Authors and their Books! Feel free to add your own!
+            </p> */}
+
           </Route>
 
           <Route exact path='/authors'>
@@ -161,17 +165,7 @@ class App extends Component {
         </br>
         <br>
         </br>
-        {/* <aside>
-
-            <section class="Teams">
-              <h2>Favorite Sports Teams</h2>
-              <a href="">NFL Football (New England Patriots / TB Buccaneers)</a>
-              <a href="">NCCA Wrestling (Iowa Hawkeyes)</a>
-              <a href="">NCCA Basketball (Augustana College)</a>
-              <a href="">MLB (Chicago Cubs)</a>
-            </section>
-          
-          </aside> */}
+        
         <footer>
           <Footer />
         </footer>
