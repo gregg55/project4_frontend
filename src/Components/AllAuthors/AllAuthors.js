@@ -9,6 +9,7 @@ export default function AllAuthors(props) {
         return <li key={author.id}><Link to={`/authors/${author.id}`}>{author.name}</Link></li>
     });
 
+    console.log(props)
     return (
 
         <section className='AllAuthors'>
@@ -20,8 +21,10 @@ export default function AllAuthors(props) {
                 <input id= "form2" type='submit'value='CREATE' />
             </form>
         
+        
             <h3> <img className="homeImg2"src ="/images/Book-Club.jpg" alt="Book" align ="right"/><u>DELETE:</u> Would you like to DELETE an Existing Author? (CRUD)</h3>
             <form onSubmit={(e) => props.deleteAuthors(e)}>
+        
                 <input id ="form1" placeholder='Type Name Here' name='name' />
                 <input id= "form2" type='submit'value='DELETE' />
             </form>

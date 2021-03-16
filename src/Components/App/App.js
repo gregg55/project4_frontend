@@ -66,12 +66,15 @@ class App extends Component {
 // CRUD - DELETE an author Feature to authorsBaseUrl & remove it 
   deleteAuthors = async (event) => {
   event.preventDefault();
-  const name = event.target.name.value;
+  const authorInfo = this.state.authors.find(author => author.name === event.target.name.value);
+  console.log(authorInfo);
+  const id = event.target.id.value;
   console.log(event.target)
-  console.log(name)
-  await axios.delete(this.authorsBaseUrl+name, { name });
+  console.log(id)
+
+  await axios.delete(this.authorsBaseUrl+"/"+ authorInfo.id);
   await this.getAllAuthors()
-  console.log(this.authorsBaseUrl, { name })
+  console.log(this.authorsBaseUrl)
 
 }
 
@@ -148,7 +151,7 @@ class App extends Component {
           </Route>
 
           <Route exact path='/authors'>
-            <AllAuthors authors={this.state.authors} createAuthors={this.addAuthor} deleteAuthors={this.deleteAuthors} updateAuthors={this.updateAuthors}/>
+            <AllAuthors {...this.state} createAuthors={this.addAuthor} deleteAuthors={this.deleteAuthors} updateAuthors={this.updateAuthors}/>
           </Route>
 
           <Route
