@@ -5,7 +5,7 @@ import './index.css';
 import App from './Components/App/App';
 import reportWebVitals from './reportWebVitals';
 
-// Change from Strict to Router
+// Setup - Change Strict to Router
 ReactDOM.render(
   <Router>
     <App />

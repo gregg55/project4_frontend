@@ -1,0 +1,21 @@
+
+/* h1 applies to app.js and home.js  */
+h1 {
+    font-size: 40px;
+    color: burlywood;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    color: burlywood
+   
+}
+
+.homeImg{
+    max-width:70%;
+    text-align: right;
+    display:flex;
+    flex-wrap: wrap;
+   
+}

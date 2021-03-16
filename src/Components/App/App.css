@@ -1,8 +1,18 @@
+
+
+/* body is contained in the App.js  */
+
 body{
   background:gray;
 }
 
 
+
+p {
+  text-align: center;
+}
+
+/* class Header from Header.js */
 .header{
   display:flex;
   height: 50px;
@@ -17,7 +27,7 @@ body{
   top: 0;
 }
 
-/* Footer CSS begins below */
+/* class footer-bottom from Footer.js */
 .footer-bottom {
   display:flex;
   padding: 15px 0;
@@ -31,7 +41,7 @@ body{
   flex-wrap: wrap;
   
 }
-
+/* class copyrighttitle from Footer.js */
 .copyrighttitle {
   color: #b0b0b0;
   text-align: center;
@@ -39,41 +49,45 @@ body{
 
 }
 
-/* Copy Right Infor */
+/* class copyright a from Footer.js */
 .copyright a {
   color: burlywood;
   margin-left: 10px;        
 }
+
+/* class copyright  from Footer.js */
 .copyright  {
   color: #99a9b5;
   margin-left: 65px;
 }  
 
+/* class footer-menu li from Footer.js */
 #footer-menu li {
   display: inline-block;
   padding: 0 10px;
   position: relative;
   line-height: 1;
- 
   
 }
+
+/* class menu1 from Footer.js */
 .menu1{
   color:#99a9b5;
   text-decoration: none;
 }
 
-
+/* class socials from Footer.js */
 .socials{
   height: 60px;
   display:flex;
   align-items: center;
 }
+
+/* class imgF from Footer.js */
 .imgF{
   height:50px;
   padding-left: 5px;
 }
-
-/* Header Page CSS Below */
 
 
 
@@ -91,62 +105,52 @@ body{
   align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+class app-nav from App.js
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  margin-top: 200px;
+  color: red;
+  position: fixed;
+  width: 100%;
+  top: 55px;
+  background-color: gray;
+  min-height: 75px;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Class img1 from App.js - Book Club Photo */
+.img1{
+  max-width:50%;
+  /* text-align: right; */
+  display:flex;
+  flex-wrap: wrap;
+  margin:auto;
+  margin-left: 400px;
+  border: 0.5rem outset pink;
+  /* outline: 0.5rem solid khaki;
+  box-shadow: 0 0 0 2rem skyblue; */
+  border-radius: 12px;
+  font: bold 1rem sans-serif;
+  /* margin: 2rem; */
+  padding: 1rem;
+  outline-offset: 0.5rem;
+  margin-bottom: 4px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

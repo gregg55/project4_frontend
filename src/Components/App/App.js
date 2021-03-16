@@ -8,6 +8,7 @@ import AuthorDetail from '../AuthorDetail/AuthorDetail';
 import axios from 'axios';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import Home from '../Home/Home';
 
 // import logo from './logo.svg';  
 
@@ -17,12 +18,14 @@ class App extends Component {
   constructor() {
     super();
     this.authorsBaseUrl =  'http://localhost:3000/api/authors';
-
+    this.authorsBaseUrl1 =  'http://localhost:3000/api/authors/1';
+    this.booksBaseUrl = 'http://localhost:3000/api/authors/profile/';
     this.state = {
       authors: []
     }
   }
 
+  // READ All Authors 
   async getAllAuthors () {
     const response = await axios.get(this.authorsBaseUrl);
     console.log(response)
@@ -32,14 +35,24 @@ class App extends Component {
     console.log(this.state.authors)
 
   }
-    
+  //  pull Book information such as title into booksBaseURL
+    async getAllBooks () {
+    const response = await axios.get(this.booksBaseUrl);
+    console.log(response)
+ 
+    this.setState({ authors: response.data.author });
+    console.log(this.state.authors)
 
+  }
+
+// Component Did Mount 
   async componentDidMount () {
     await this.getAllAuthors()
     console.log(this.componentDidMount)
   }
 
-  addAuthor = async (event) => {
+// CRUD - CREATE NEW AUTHOR:   - This Works
+    addAuthor = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     console.log(name)
@@ -49,7 +62,32 @@ class App extends Component {
 
   }
 
-  addBook = async (event, authors_id) => {
+
+// CRUD - DELETE an author Feature to authorsBaseUrl & remove it 
+  deleteAuthors = async (event) => {
+  event.preventDefault();
+  const name = event.target.name.value;
+  console.log(event.target)
+  console.log(name)
+  await axios.delete(this.authorsBaseUrl+name, { name });
+  await this.getAllAuthors()
+  console.log(this.authorsBaseUrl, { name })
+
+}
+
+// CRUD - UPDATE an author Feature to authorsBaseUrl to change
+  updateAuthors = async (event) => {
+  event.preventDefault();
+  const name = event.target.name.value;
+  console.log(name)
+  await axios.post(this.authorsBaseUrl, { name });
+  await this.getAllAuthors()
+  console.log(this.authorsBaseUrl, { name })
+
+  }
+
+  // Add a Book title Feature to authorsBaseUrl & post it 
+    addBook = async (event, authors_id) => {
     event.preventDefault();
     const title = event.target.title.value
     console.log(title)
@@ -64,7 +102,19 @@ class App extends Component {
   render() {
 
     return (
+// Added Header Feature - see Header.js and Header.css
+      <div>
+        <header>
+          <Header/>
+        </header> 
 
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+  
       <div className="App">
         <nav className='App-nav'>
           <ul>
@@ -72,25 +122,35 @@ class App extends Component {
             <li><Link to='/authors'>Author</Link></li>
           </ul>
         </nav>
-
+      </div>
         <Switch>
           <Route exact path='/'>
-            <h1>Welcome to Famous Authors Club!</h1>
+            <h1>Welcome to the Famous Authors Club!</h1>
             <p>Check out our Authors and their Books! Feel free to add your own!</p>
+
+            <div className="homeImg" ><img className="img1" src ="/images/Book-Club.jpg" alt="Book"/></div>
+
           </Route>
 
           <Route exact path='/authors'>
-            <AllAuthors authors={this.state.authors} createAuthors={this.addAuthor} />
+            <AllAuthors authors={this.state.authors} createAuthors={this.addAuthor} deleteAuthors={this.deleteAuthors} updateAuthors={this.updateAuthors}/>
           </Route>
 
           <Route
-            path='/author/:id'
+            path='/AuthorDetail/:id'
             component={(routerProps) => (
               <AuthorDetail authors={this.state.authors} createBook={this.addBook} {...routerProps} />
             )}
           />
             
         </Switch>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+
         <footer>
           <Footer />
         </footer>
