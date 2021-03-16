@@ -118,10 +118,21 @@ class App extends Component {
       <div className="App">
         <nav className='App-nav'>
           <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/authors'>Author</Link></li>
+          <li><a href="" class="current">"Menu Links"</a></li>
+            <li><Link to='/'>Home Page</Link></li>
+            <li><Link to='/authors'>Authors Club </Link></li>
           </ul>
         </nav>
+        <nav>
+				<ul>
+					<li><a href="" class="current">"Quick Links"</a></li>
+					<li><a href="https://www.amazon.com/They-Call-Coach-John-Wooden/dp/0071424911">My Favorite Book</a></li>
+					<li><a href="https://www.jgrisham.com/">My Favorite Author</a></li>
+					<li><a href="https://www.amazon.com/Marco-Lemessi/e/B08B58H43Z%3Fref=dbs_a_mng_rwt_scns_share">My Favorite New Author</a></li>
+					<li><a href="https://www.google.com/search?client=firefox-b-1-d&q=top+book+sellers+2021">Top 2021 Book Sellers</a></li>
+				</ul>
+			</nav>
+
       </div>
         <Switch>
           <Route exact path='/'>
@@ -150,7 +161,17 @@ class App extends Component {
         </br>
         <br>
         </br>
+        {/* <aside>
 
+            <section class="Teams">
+              <h2>Favorite Sports Teams</h2>
+              <a href="">NFL Football (New England Patriots / TB Buccaneers)</a>
+              <a href="">NCCA Wrestling (Iowa Hawkeyes)</a>
+              <a href="">NCCA Basketball (Augustana College)</a>
+              <a href="">MLB (Chicago Cubs)</a>
+            </section>
+          
+          </aside> */}
         <footer>
           <Footer />
         </footer>

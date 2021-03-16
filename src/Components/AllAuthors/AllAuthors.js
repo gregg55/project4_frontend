@@ -10,6 +10,7 @@ export default function AllAuthors(props) {
     });
 
     return (
+
         <section className='AllAuthors'>
             <h1>Listing of all Authors</h1>
          
@@ -31,12 +32,13 @@ export default function AllAuthors(props) {
                 <input id= "form2" type='submit'value='UPDATE' />
             </form>
             <h3> <u>READ:</u>  Author Listing shown below (CRUD)</h3>
-            <ul>{authors}</ul>
+            <ul>{authors}</ul> 
 {/* Added IMAGE - BOOK CLUB  */}
-            <div className="homeImg2" ><img className="img2" src ="/images/Book_Club_logo1.jpg" alt="Book"/></div>
+            {/* <div className="homeImg2" ><img className="img2" src ="/images/Book_Club_logo1.jpg" alt="Book"/></div> */}
  
         </section>
-        
+    
+   
     );
 
     

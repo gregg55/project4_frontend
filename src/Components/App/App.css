@@ -1,3 +1,22 @@
+/* header, section, nav, article, aside, main, footer { display: block; } */
+
+ nav li {
+  display: inline;
+  margin-right: 40px;
+}
+ nav li a {
+  color: black;} 
+
+nav li a.current {
+  color: red;
+
+}
+  
+  .current{
+    clear: both;
+    color: #ffffff;
+    background-color: burlywood;
+    height: 30px;} 
 
 
 /* body is contained in the App.js  */
@@ -122,24 +141,11 @@ class app-nav from App.js
 
 /* Class img1 from App.js - Book Club Photo */
 .img1{
-  max-width:50%;
-  /* text-align: right; */
-  display:flex;
-  flex-wrap: wrap;
-  margin:auto;
-  margin-left: 400px;
-  border: 0.5rem outset pink;
-  /* outline: 0.5rem solid khaki;
-  box-shadow: 0 0 0 2rem skyblue; */
-  border-radius: 12px;
-  font: bold 1rem sans-serif;
-  /* margin: 2rem; */
-  padding: 1rem;
-  outline-offset: 0.5rem;
-  margin-bottom: 4px;
+  display:block;
+  margin: 0 auto;
+  
   
 }
-
 
 
 
