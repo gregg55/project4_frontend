@@ -18,7 +18,7 @@ class App extends Component {
   constructor() {
     super();
     this.authorsBaseUrl =  'http://localhost:3000/api/authors';
-    this.authorsBaseUrl1 =  'http://localhost:3000/api/authors/1';
+    this.authorsBaseUrl1 =  'http://localhost:3000/api/authors/:id';
     this.booksBaseUrl = 'http://localhost:3000/api/authors/profile/';
     this.state = {
       authors: []
@@ -78,18 +78,18 @@ class App extends Component {
 
 }
 
-// CRUD - UPDATE an author Feature to authorsBaseUrl to change
-  // updateAuthors = async (event) => {
-  // event.preventDefault();
-  // const updateAuthor = event.target.name.value;
-  // console.log(name)
-  // await axios.post(this.authorsBaseUrl, { name });
-  // await this.getAllAuthors()
-  // console.log(this.authorsBaseUrl, { name })
+// // CRUD - UPDATE an author Feature to authorsBaseUrl to change
+//   updateAuthors = async (event) => {
+//   event.preventDefault();
+//   const updateAuthor = event.target.name.value;
+//   console.log(updateAuthor)
+//   await axios.put(this.authorsBaseUrl1, { updateAuthor});
+//   await this.getAllAuthors()
+//   console.log(this.authorsBaseUrl1, { updateAuthor})
 
-  // }
+//   }
 
-  // // Add a Book title Feature to authorsBaseUrl & post it 
+  // // BONUS - Add a Book title Feature to authorsBaseUrl & post it 
   //   addBook = async (event, authors_id) => {
   //   event.preventDefault();
   //   const title = event.target.title.value
@@ -144,22 +144,19 @@ class App extends Component {
 
             <div className="homeImg" ><img className="img1" src ="/images/Book-Club.jpg" alt="Book"/></div>
 
-            {/* <p> <img src ="/images/Book-Club.jpg" alt="Book"  width ="100" height ="100" align ="right"/>
-            Check out our Authors and their Books! Feel free to add your own!
-            </p> */}
-
           </Route>
 
           <Route exact path='/authors'>
             <AllAuthors {...this.state} createAuthors={this.addAuthor} deleteAuthors={this.deleteAuthors} updateAuthors={this.updateAuthors}/>
           </Route>
 
-          <Route
+        {/* Bonus for Book Add on - if everything else works in the program */}
+          {/* <Route
             path='/AuthorDetail/:id'
             component={(routerProps) => (
               <AuthorDetail authors={this.state.authors} createBook={this.addBook} {...routerProps} />
-            )}
-          />
+            )} */}
+          {/* /> */}
             
         </Switch>
         <br>

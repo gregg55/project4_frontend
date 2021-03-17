@@ -29,13 +29,13 @@ export default function AllAuthors(props) {
                 <input id= "form2" type='submit'value='DELETE' />
             </form>
 
-            <h3> <img className="homeImg2" src ="/images/Book-Club.jpg" alt="Book"  align ="right"/><u>UPDATE:</u> Would you like to UPDATE an Existing Author? (CRUD)</h3>
+            {/* <h3> <img className="homeImg2" src ="/images/Book-Club.jpg" alt="Book"  align ="right"/><u>UPDATE:</u> Would you like to UPDATE an Existing Author? (CRUD)</h3>
             <form onSubmit={(e) => props.updateAuthors(e)}>
                 <input id ="form1" placeholder='Type Name Here' name='name' />
                 <input id= "form2" type='submit'value='UPDATE' />
-            </form>
+            </form> */}
             <h3> <u>READ:</u>  Author Listing shown below (CRUD)</h3>
-            <ul>
+            <ul className="col">
                 < h3>Complete Listing of all Authors Names </h3>
                 {authors}
                 </ul> 

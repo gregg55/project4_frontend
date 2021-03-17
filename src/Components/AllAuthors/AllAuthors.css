@@ -85,7 +85,7 @@ h3 {
 
     } */
    
-    ul {
+   ul.col{
       list-style-type: square;
       border: 0.5rem outset burlywood;
       padding: 10px;

@@ -40,7 +40,7 @@ p {
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  border: 0.5rem outset khaki;
+  border: 0.5rem outset burlywood;
   position: fixed;
   width: 100%;
   top: 0;
@@ -54,7 +54,7 @@ p {
   background-color: black;
   color: #b0b0b0;
   font-family: rubik;
-  border: 0.5rem outset khaki;
+  border: 0.5rem outset burlywood;
   align-items:center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -124,7 +124,7 @@ p {
   align-items: center;
 }
 
-class app-nav from App.js
+/* class app-nav from App.js */
 .app {
   display: flex;
   justify-content: center;
