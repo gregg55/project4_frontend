@@ -79,15 +79,15 @@ class App extends Component {
 }
 
 // CRUD - UPDATE an author Feature to authorsBaseUrl to change
-  updateAuthors = async (event) => {
-  event.preventDefault();
-  const name = event.target.name.value;
-  console.log(name)
-  await axios.post(this.authorsBaseUrl, { name });
-  await this.getAllAuthors()
-  console.log(this.authorsBaseUrl, { name })
+  // updateAuthors = async (event) => {
+  // event.preventDefault();
+  // const updateAuthor = event.target.name.value;
+  // console.log(name)
+  // await axios.post(this.authorsBaseUrl, { name });
+  // await this.getAllAuthors()
+  // console.log(this.authorsBaseUrl, { name })
 
-  }
+  // }
 
   // Add a Book title Feature to authorsBaseUrl & post it 
     addBook = async (event, authors_id) => {
