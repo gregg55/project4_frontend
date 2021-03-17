@@ -21,3 +21,5 @@ The _`WIREFRAME`_ concept for this App was broken into 4 Tables.
 ## Author Club Listing Page - Front End
 
 ![Image](../public/Images/AuthorPage.jpg)
+
+By Gregg Machettait 
