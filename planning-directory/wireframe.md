@@ -22,4 +22,4 @@ The _`WIREFRAME`_ concept for this App was broken into 4 Tables.
 
 ![Image](../public/Images/AuthorPage.jpg)
 
-By Gregg Machettait 
+By Gregg Machetta 2/17/2021
