@@ -85,6 +85,17 @@ h3 {
 
     } */
    
+    ul {
+      list-style-type: square;
+      border: 0.5rem outset burlywood;
+      padding: 10px;
+      margin-left: 35px;
+      margin-right: 35px;
+      columns: 3;
+    -webkit-columns: 5;
+    /* -moz-columns: 2; */
+      
+    } 
 
    
 

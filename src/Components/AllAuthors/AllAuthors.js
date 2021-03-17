@@ -35,7 +35,10 @@ export default function AllAuthors(props) {
                 <input id= "form2" type='submit'value='UPDATE' />
             </form>
             <h3> <u>READ:</u>  Author Listing shown below (CRUD)</h3>
-            <ul>{authors}</ul> 
+            <ul>
+                < h3>Complete Listing of all Authors Names </h3>
+                {authors}
+                </ul> 
 
            {/* <ul> <img src ="/images/Book-Club.jpg" alt="Book"  width ="250" height ="250" align ="right"/> {authors}</ul> */}
 {/* Added IMAGE - BOOK CLUB  */}

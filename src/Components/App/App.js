@@ -25,7 +25,7 @@ class App extends Component {
     }
   }
 
-  // READ All Authors 
+  // READ All Authors Data from the Back End - File is called above as authorsBaseURL
   async getAllAuthors () {
     const response = await axios.get(this.authorsBaseUrl);
     console.log(response)
@@ -63,7 +63,7 @@ class App extends Component {
   }
 
 
-// CRUD - DELETE an author Feature to authorsBaseUrl & remove it 
+// CRUD - DELETE AUTHORS -  This Works
   deleteAuthors = async (event) => {
   event.preventDefault();
   const authorInfo = this.state.authors.find(author => author.name === event.target.name.value);
@@ -89,18 +89,18 @@ class App extends Component {
 
   // }
 
-  // Add a Book title Feature to authorsBaseUrl & post it 
-    addBook = async (event, authors_id) => {
-    event.preventDefault();
-    const title = event.target.title.value
-    console.log(title)
-    const url = `${this.authorsBaseUrl}/${authors_id}/newbook`;
+  // // Add a Book title Feature to authorsBaseUrl & post it 
+  //   addBook = async (event, authors_id) => {
+  //   event.preventDefault();
+  //   const title = event.target.title.value
+  //   console.log(title)
+  //   const url = `${this.authorsBaseUrl}/${authors_id}/newbook`;
 
-    console.log(url, { title });
+  //   console.log(url, { title });
 
-    await axios.post(url, { title });
-    await this.getAllAuthors();
-  }
+  //   await axios.post(url, { title });
+  //   await this.getAllAuthors();
+  // }
 
   render() {
 

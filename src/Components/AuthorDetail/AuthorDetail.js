@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
     class AuthorDetail extends Component {
         render() {
           const authorDetail = this.props.author.find((author) => {
-            return author.id == this.props.match.params.id;
+            return author.id === this.props.match.params.id;
           });
           const authorBooks = authorDetail.Books.map((book) => {
             return <li key={book.id}>{book.title}</li>;
