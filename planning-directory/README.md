@@ -9,7 +9,7 @@ This App can be used to help people find authors and the respective book titles
 
 To search a listing of all the Tables.  You will need to go into pgAdmin. 
 
-![Image](./images/PGADMIN_TABLES.jpg)
+![Image](../public/Images/PGADMIN_TABLES.jpg)
 
 
 ### `Search a LISTING of User - Use the GET Command`
