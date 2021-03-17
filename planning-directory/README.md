@@ -5,6 +5,18 @@ This App can be used to help people find authors and the respective book titles
 ![Image](https://vermillionpubliclibrary.org/wp-content/uploads/2012/09/Book_Club_logo1.jpg)
 
 
+# Getting Started - Front End Home Page
+
+To view the Front End Home Page. 
+
+![Image](../public/Images/HomePageLinks.jpg)
+
+# Getting Started - Front End Home Page
+
+To view the Authors Club Listing Page.   
+
+![Image](../public/Images/AuthorsPageCRUD.jpg)
+
 # Getting Started - DATA MIGRATION 
 
 To search a listing of all the Tables.  You will need to go into pgAdmin. 
