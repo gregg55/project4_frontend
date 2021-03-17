@@ -1,4 +1,4 @@
-# WIREFRAME - PROJECT 4
+# WIREFRAME - PROJECT 4 Full Stack
 
 The Original Concept for the Wireframe was developed on 3/13/2020.
 
@@ -10,7 +10,14 @@ The _`WIREFRAME`_ concept for this App was broken into 4 Tables.
 3. The _`Table: Author`_ is shown 3rd.
 3. The _`Table: Books`_ is shown 4th.
 
-## Wireframe Concept
+## Wireframe Concept Model - Back End
 
+![Image](../public/Images/WIREFRAME.jpg)
 
-![Image](./images/WIREFRAME.jpg)
+## Author Club Home Page - Front End
+
+![Image](../public/Images/AuthorClubHomePage.jpg)
+
+## Author Club Listing Page - Front End
+
+![Image](../public/Images/AuthorPage.jpg)
