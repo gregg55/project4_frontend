@@ -1,5 +1,6 @@
 // Add import react, react-router-dom, axios, 
-
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React, { Component } from "react";
 import { Route, Switch, Link } from 'react-router-dom';
@@ -122,17 +123,35 @@ class App extends Component {
         <nav className='App-nav'>
           <ul>
           <li><a href="" class="current">"Menu Links"</a></li>
-            <li><Link to='/'>Home Page</Link></li>
-            <li><Link to='/authors'>Authors Club </Link></li>
+            {/* <li><Link to='/'>Home Page</Link></li>
+            <li><Link to='/authors'>Authors Club </Link></li> */}
+            <>
+              <Link to='/'> <Button variant="success">HOME PAGE </Button>{''}</Link>
+            </>
+            <>
+              <Link to='/authors'> <Button variant="danger">AUTHORS CLUB </Button>{'    '}</Link>
+            </>
           </ul>
         </nav>
         <nav>
 				<ul>
 					<li><a href="" class="current">"Quick Links"</a></li>
-					<li><a href="https://www.amazon.com/They-Call-Coach-John-Wooden/dp/0071424911">My Favorite Book</a></li>
-					<li><a href="https://www.jgrisham.com/">My Favorite Author</a></li>
-					<li><a href="https://www.amazon.com/Marco-Lemessi/e/B08B58H43Z%3Fref=dbs_a_mng_rwt_scns_share">My Favorite New Author</a></li>
-					<li><a href="https://www.google.com/search?client=firefox-b-1-d&q=top+book+sellers+2021">Top 2021 Book Sellers</a></li>
+					{/* <li><a href="https://www.amazon.com/They-Call-Coach-John-Wooden/dp/0071424911">My Favorite Book</a></li>
+					<li><a href="https://www.jgrisham.com/">My Favorite Author</a></li> */}
+          <>
+          <Button a href="https://www.amazon.com/They-Call-Coach-John-Wooden/dp/0071424911"variant="primary">My Favorite Book</Button>{'    '}
+          </>
+          <>
+          <Button a href="https://www.jgrisham.com/"variant="success">My Favorite Author</Button>{'    '}
+          </>
+          <>
+          <Button a href="https://www.amazon.com/Marco-Lemessi/e/B08B58H43Z%3Fref=dbs_a_mng_rwt_scns_share"variant="warning">My Favorite New Author</Button>{'    '}
+          </>
+          <>
+          <Button a href="https://www.google.com/search?client=firefox-b-1-d&q=top+book+sellers+2021"variant="danger">Top 2021 Book Sellers</Button>{'    '}
+          </>
+					{/* <li><a href="https://www.amazon.com/Marco-Lemessi/e/B08B58H43Z%3Fref=dbs_a_mng_rwt_scns_share">My Favorite New Author</a></li> */}
+					{/* <li><a href="https://www.google.com/search?client=firefox-b-1-d&q=top+book+sellers+2021">Top 2021 Book Sellers</a></li> */}
 				</ul>
 			</nav>
 
